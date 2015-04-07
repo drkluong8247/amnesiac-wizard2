@@ -21,17 +21,18 @@ function preload() {
     this.preloadBar.anchor.setTo(0.5, 0.5);
 
     this.load.setPreloadSprite(this.preloadBar);
+    
 
 //======================= load all in game assets ============================================
     // Loads images
-    game.load.image( 'world', 'assets/ForestBackground.png' );
-    game.load.image( 'wizard', 'assets/Mage.png');
-    game.load.image( 'monster', 'assets/Specter.png');
-    game.load.image( 'magic', 'assets/Boltshot.png');
+    this.game.load.image( 'world', 'assets/ForestBackground.png' );
+    this.game.load.image( 'wizard', 'assets/Mage.png');
+    this.game.load.image( 'monster', 'assets/Specter.png');
+    this.game.load.image( 'magic', 'assets/Boltshot.png');
         
     // loads sound
-    game.load.audio( 'castSound', 'assets/magicshot.mp3');
-    game.load.audio( 'backgroundMusic', 'assets/AnimalCrossing-TownHall.ogg');
+    this.game.load.audio( 'castSound', 'assets/magicshot.mp3');
+    this.game.load.audio( 'backgroundMusic', 'assets/AnimalCrossing-TownHall.ogg');
 }
 
 function create() {
@@ -40,7 +41,7 @@ function create() {
 
 function update()
 {
-    
+    this.preloadBar.angle += 1;
     if(this.cache.isSoundDecoded('backgroundMusic') && this.ready === false) {
         this.ready = true;
         this.state.start("Menu");
