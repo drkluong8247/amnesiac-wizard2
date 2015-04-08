@@ -16,7 +16,8 @@ BasicGame.Menu = function(game) {
 
         if(this.enterClicked == false) {
             this.enterClicked = true;
-            this.gameTime = this.game.time.now + 3000;
+            this.gameTime = this.game.time.now + 1000;
+            this.buttonSound.play();
         }
     }
 

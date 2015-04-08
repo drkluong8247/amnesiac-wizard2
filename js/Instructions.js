@@ -16,7 +16,8 @@ BasicGame.Instructions = function(game) {
 
         if(this.enterClicked == false) {
             this.enterClicked = true;
-            this.gameTime = this.game.time.now + 3000;
+            this.gameTime = this.game.time.now + 1000;
+            this.buttonSound.play();
         }
     }
 
@@ -33,13 +34,13 @@ function create() {
     // set up button sound
     this.buttonSound = this.game.add.audio('ding');
     
-    var instructStyle = {font: "40px Arial", fill: "#ffffff", align: "left"};
-    this.instructText = this.game.add.text(400, 600, "", instructStyle);;
-    this.instructText.setText("Player 1: WASD to move, Q to shoot, E to use special\nPlayer 2: TFGH to move, R to shoot, Y to use special\nPlayer 3: IJKL to move, U to shoot, O to use special");
-    this.instructText.anchor.setTo(0.5, 0.5)
+    var instructStyle = {font: "20px Arial", fill: "#ffffff", align: "left"};
+    this.instructText = this.game.add.text(600, 200, "", instructStyle);
+    this.instructText.setText("Player 1: WASD to move, Q to shoot, E to use special\nSkill: Multi-shot\n\nPlayer 2: TFGH to move, R to shoot, Y to use special\nSkill: LaserShine\n\nPlayer 3: IJKL to move, U to shoot, O to use special\nSkill: Double Slash");
+    this.instructText.anchor.setTo(0.5, 0.5);
     
     // set up button sprite
-    this.enter = this.game.add.sprite(600, 800, 'enter');
+    this.enter = this.game.add.sprite(600, 600, 'enter');
     this.enter.scale.setTo(.5,.5);
     this.enter.anchor.setTo(.5,.5);
     this.enter.inputEnabled = true;
