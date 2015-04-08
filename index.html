@@ -8,15 +8,17 @@
     <script src="js/Boot.js"></script>
     <script src="js/Preloader.js"></script>
     <script src="js/Menu.js"></script>
-
+    <script src="js/Instructions.js"></script>
+    
     <script type="text/javascript">
         window.onload = function () {
             // set up Phaser canvas at 1200x1200
-            var game = new Phaser.Game(1200, 1200, Phaser.AUTO, "game");
+            var game = new Phaser.Game(1200, 800, Phaser.AUTO, "game");
             // add all game states
             game.state.add("Boot",      BasicGame.Boot);
             game.state.add("Preloader", BasicGame.Preloader);
             game.state.add("Menu",      BasicGame.Menu);
+            game.state.add("Instructions", BasicGame.Instructions);
             game.state.add("Game",      BasicGame.Game);
             game.state.start("Boot");
             /*

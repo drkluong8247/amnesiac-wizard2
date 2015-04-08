@@ -27,7 +27,7 @@ function preload() {
 function create() {
     this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
     this.scale.maxWidth = 1200;
-    this.scale.maxHeight = 1200;
+    this.scale.maxHeight = 800;
     this.scale.forceLandscape = false;
 
     this.game.state.start("Preloader");
