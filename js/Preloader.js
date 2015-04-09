@@ -27,8 +27,10 @@ function preload() {
     // Loads images
     this.game.load.image( 'world', 'assets/images/ForestBackground.png' );
     this.game.load.image( 'wizard', 'assets/images/Mage.png');
+    this.game.load.image( 'wizard2', 'assets/images/DarkMage.png');
     this.game.load.image( 'monster', 'assets/images/Specter.png');
     this.game.load.image( 'magic', 'assets/images/Boltshot.png');
+    this.game.load.image( 'magic2', 'assets/images/Darkshot.png');
     this.game.load.image( 'menuBackground', 'assets/images/SpecterSwarm.png');
     this.game.load.image( 'enter', 'assets/images/Button.png');
         

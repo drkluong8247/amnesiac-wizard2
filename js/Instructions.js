@@ -36,7 +36,7 @@ function create() {
     
     var instructStyle = {font: "20px Arial", fill: "#ffffff", align: "left"};
     this.instructText = this.game.add.text(600, 200, "", instructStyle);
-    this.instructText.setText("Player 1: WASD to move, Q to shoot, E to use special\nSkill: Multi-shot\n\nPlayer 2: TFGH to move, R to shoot, Y to use special\nSkill: LaserShine\n\nPlayer 3: IJKL to move, U to shoot, O to use special\nSkill: Double Slash");
+    this.instructText.setText("Player 1: WASD to move, Q to shoot, E to use special\nSkill: Multi-shot\n\nPlayer 2: IJKL to move, U to shoot, O to use special\nSkill: Double Slash");
     this.instructText.anchor.setTo(0.5, 0.5);
     
     // set up button sprite
